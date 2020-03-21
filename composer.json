@@ -14,8 +14,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "laravel/framework": "^7.0",
         "laravel/tinker": "^2.0",
-        "spatie/laravel-sluggable": "^2.4",
-        "unicodeveloper/laravel-paystack": "^1.0"
+        "spatie/laravel-sluggable": "^2.4"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
