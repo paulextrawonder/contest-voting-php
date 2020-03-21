@@ -19,7 +19,7 @@ class CreateContestantsTable extends Migration
             $table->string('info');
             $table->string('slug');
             $table->string('image');
-            $table->string('age');
+            $table->unsignedBigInteger('age');
             $table->timestamps();
         });
     }
