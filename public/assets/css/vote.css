@@ -1,0 +1,36 @@
+.container {
+	padding: 5rem;
+}
+
+.paragraphs img {
+	float: none;
+	max-width: 100%;
+	width: 100%;
+}
+
+.span4 {
+	margin: 0 auto;
+	max-width: 300px;
+	text-align: center;
+}
+
+.paragraphs img {
+	float: left;
+	max-width: 300px;
+	width: 300px;
+	margin-right: 3rem;
+}
+
+.span4 {
+	margin: 0;
+	max-width: 100%;
+	text-align: left;
+}
+
+.content-heading {
+	padding-top: 1rem;
+}
+
+.btn {
+	margin-top: 2rem;
+}

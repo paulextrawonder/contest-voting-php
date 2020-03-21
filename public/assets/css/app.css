@@ -1,0 +1,15 @@
+.gallery
+{
+    display: inline-block;
+    margin-top: 5rem;
+}
+
+[class*=col-] {
+	position: relative;
+}
+
+.vote-link {
+	position: absolute;
+	top: 1rem;
+	margin-left: 1rem;
+}
