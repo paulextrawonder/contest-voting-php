@@ -30,8 +30,8 @@ class Contestant extends Model
         return 'slug';
     }
 
-    public function votes()
+    public function votesCount()
     {
-        return $this->hasMany(Votes::class);
+        return $this->hasOne(Votes::class);
     }
 }
