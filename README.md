@@ -1,4 +1,4 @@
-# Contest Voting WebApp
+## Contest Voting WebApp
 
 A Laravel hobby project: contest-voting web app.
 
@@ -23,3 +23,6 @@ php artisan serve
 
 ## Contribution
 Its okay with me, you're welcome. Just a hobby work.
+
+## Deployment 
+The finished work will be deployed to REMA official website 
