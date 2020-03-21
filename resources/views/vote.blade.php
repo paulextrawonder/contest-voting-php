@@ -4,6 +4,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         
         <title>Vote {{ $contestant->name }} - PaulHack Beauty Contest</title>
 
@@ -30,7 +31,7 @@
                             {{ $contestant->info }}
                         </div>
                         <hr>
-                        Number of Votes: 
+                        Number of Votes: {{ $votes }} <br>
                         <button class="btn btn-primary" onclick="payWithPaystack()">Vote {{ $contestant->name }}</button>
                         <div style="clear:both"></div>
                     </div>
@@ -64,14 +65,21 @@
                         //after the transaction have been completed
                         //make post call  to the server with to verify payment 
                         //using transaction reference as post data
-                        $.post("verifypayment/{{ $contestant->slug }}", {reference:response.reference}, function(status){
-                            if(status == "success")
-                                //successful transaction
-                                alert('Transaction was successful');
-                            else
-                                //transaction failed
-                                alert(response);
-                        });
+                        $.post(
+                            "verifypayment/{{ $contestant->slug }}",
+                            {
+                                reference: response.reference,
+                                "_token": "{{ csrf_token() }}",
+                            },
+                            function(status){
+                                if(status == true) {
+                                    window.location.reload(true);
+                                } else {
+                                    //transaction failed
+                                    alert(response);
+                                }
+                            }
+                        );
                     },
                     onClose: function () {
                         //when the user close the payment modal
